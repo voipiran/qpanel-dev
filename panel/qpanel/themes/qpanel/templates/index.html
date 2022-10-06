@@ -25,32 +25,32 @@
 
     <div class="main-panel">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+      <nav style="display: none !important;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         {% include theme('header.html') %}
       </nav>
       <!-- End Navbar -->
       <div class="content">
         <div class="row">
-        {% include theme('row_general_data.html') %}
-        {% for queue_name, queue in queues.items() %}
+          {% include theme('row_general_data.html') %}
+          {% for queue_name, queue in queues.items() %}
           <div class="col-md-4">
             <div class="card card-chart">
               <div class="card-header card-header-success queue-card">
 
                 <a class="link-queue" href="{{ url_for('.queue', name=queue_name) }}">
-                <div class="row header-{{ queue_name }}">
-                  <div class="col-md-6">
-                    {{ queue_name }} - <span id="strategy"></span>
+                  <div class="row header-{{ queue_name }}">
+                    <div class="col-md-6">
+                      {{ queue_name }} - <span id="strategy"></span>
+                    </div>
+                    <div class="col-md-6">
+                      <i class="fa fa-users"></i><span id="queue_users">{{ queue.members | count }} </span> {{_('Agents')}}
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <i class="fa fa-users"></i><span id="queue_users">{{ queue.members | count }} </span> {{_('Agents')}}
-                  </div>
-                </div>
               </div>
 
               <div class="card-body">
 
-                <div class="row data"  id="data-{{ queue_name }}">
+                <div class="row data" id="data-{{ queue_name }}">
                   <div class="col-md-6">
 
                     <p class="card-category">
@@ -75,13 +75,13 @@
 
                   <div class="col-md-6">
                     <p class="card-category">
-                        <span id="queue_unavailable"></span>
+                      <span id="queue_unavailable"></span>
                     </p>
                     <p class="card-category">
-                        <span id="queue_busy"></span>
+                      <span id="queue_busy"></span>
                     </p>
                     <p class="card-category">
-                        <span id="queue_free"></span>
+                      <span id="queue_free"></span>
                     </p>
                   </div>
                 </div>
@@ -90,16 +90,16 @@
               <div class="card-footer justify-content-center">
                 <div class="stats-content-center">
                   <p class="card-category">
-                      <span><i class="material-icons">whatshot</i></span>
-                      <b> {{ _('Abandoned:') }}</b> <span id="{{ queue_name }}-percent_abandoned">0</span>%
+                    <span><i class="material-icons">whatshot</i></span>
+                    <b> {{ _('Abandoned:') }}</b> <span id="{{ queue_name }}-percent_abandoned">0</span>%
                   </p>
                 </div>
               </div>
             </div>
             </a>
           </div>
-        {% endfor %}
-       </div>
+          {% endfor %}
+        </div>
       </div>
       {% include theme('footer.html') %}
     </div>
