@@ -25,7 +25,7 @@
 
     <div class="main-panel">
       <!-- Navbar -->
-      <nav style="display: none !important;" class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         {% include theme('header.html') %}
       </nav>
       <!-- End Navbar -->
@@ -140,11 +140,16 @@
       const res = string === "" ? {} : JSON.parse(string);
 
       // $("#language").val(res.lang)
-      document.body.setAttribute('dir', res.dir)
-
-      if (localStorage.getItem('lang') == res.lang)
-        return
-
+      if (res.lang == 'fa') {
+        $('body').addClass('custom-rtl');
+      }
+      else {
+        $('body').removeClass('custom-rtl');
+      }
+      
+      if (localStorage.getItem('lang') == res.lang || localStorage.getItem('lang') == null)
+      return
+      
       localStorage.setItem('lang', res.lang)
       window.location = '{{ url_for('.language') }}' + '/' + res.lang;
     }
