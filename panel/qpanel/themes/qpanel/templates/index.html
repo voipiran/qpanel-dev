@@ -21,7 +21,7 @@
 </head>
 
 <body class="">
-  <div class="wrapper ">
+  <div class="wrapper">
 
     <div class="main-panel">
       <!-- Navbar -->
@@ -123,6 +123,32 @@
   <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
   <script src="{{ theme_static('js/qpanel.index.js') }}" type="text/javascript"></script>
   {% include theme('i18n_js.html') %}
+
+  <!-- -------------------------------------- custom script -------------------------------- -->
+  <script>
+    // <!-- request for detect language -->
+    getLanguage();
+    async function getLanguage() {
+      var host = window.location.protocol + "//" + window.location.hostname;
+      let url = `${host}/voipiran/stats/get-lang`;
+      console.log(url);
+      const response = await fetch(url, {
+        method: 'GET',
+        // mode: 'no-cors'
+      });
+      const string = await response.text();
+      const res = string === "" ? {} : JSON.parse(string);
+
+      // $("#language").val(res.lang)
+      document.body.setAttribute('dir', res.dir)
+
+      if (localStorage.getItem('lang') == res.lang)
+        return
+
+      localStorage.setItem('lang', res.lang)
+      window.location = '{{ url_for('.language') }}' + '/' + res.lang;
+    }
+  </script>
 
 </body>
 

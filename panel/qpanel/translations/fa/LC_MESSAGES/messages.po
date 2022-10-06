@@ -5,18 +5,19 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version:  0.8.0\n"
+"Project-Id-Version: 0.8.0\n"
 "Report-Msgid-Bugs-To: a@rodrigoramirez.com\n"
 "POT-Creation-Date: 2015-10-26 07:53-0400\n"
-"PO-Revision-Date: 2016-08-05 15:57-0400\n"
+"PO-Revision-Date: 2022-10-06 13:36+0330\n"
 "Last-Translator: Rodrigo Ramírez Norambuena <a@rodrigoramirez.com>\n"
-"Language: es\n"
 "Language-Team: es <a@rodrigoramirez.com>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.6.0\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: qpanel/app.py:179 qpanel/templates/fs/index.html:181
 #: qpanel/templates/global_js.html:13 qpanel/templates/i18n_js.html:15
@@ -197,13 +198,11 @@ msgstr "Existe una nueva versión estable: "
 #: qpanel/templates/footer.html:43
 #: qpanel/themes/qpanel/templates/footer.html:55
 msgid ""
-". Visit and update your QPanel <a "
-"href=\"https://github.com/roramirez/qpanel\" target=\"_blank\" "
-"style=\"color:#ffd777\">from GitHub</a>."
+". Visit and update your QPanel <a href=\"https://github.com/roramirez/qpanel"
+"\" target=\"_blank\" style=\"color:#ffd777\">from GitHub</a>."
 msgstr ""
-". Visita y actualiza QPanel <a "
-"href=\"https://github.com/roramirez/qpanel\" target=\"_blank\" "
-"style=\"color:#ffd777\">desde GitHub</a>."
+". Visita y actualiza QPanel <a href=\"https://github.com/roramirez/qpanel\" "
+"target=\"_blank\" style=\"color:#ffd777\">desde GitHub</a>."
 
 #: qpanel/templates/fs/index.html:54 qpanel/templates/fs/index.html:116
 #: qpanel/templates/global_js.html:6 qpanel/templates/index.html:43
@@ -212,7 +211,7 @@ msgstr ""
 #: qpanel/themes/qpanel/templates/row_general_data.html:32
 #: qpanel/themes/qpanel/templates/stats.html:97
 msgid "Abandoned"
-msgstr "Abandonadas"
+msgstr "قطع شده"
 
 #: qpanel/templates/fs/index.html:53 qpanel/templates/fs/index.html:121
 #: qpanel/templates/global_js.html:7 qpanel/templates/index.html:42
@@ -278,7 +277,7 @@ msgstr "Colas"
 #: qpanel/themes/qpanel/templates/index.html:66
 #: qpanel/themes/qpanel/templates/row_general_data.html:50
 msgid "Incoming"
-msgstr "En línea"
+msgstr "بر خط"
 
 #: qpanel/templates/fs/index.html:57 qpanel/templates/index.html:46
 #: qpanel/themes/qpanel/templates/index.html:71
@@ -478,4 +477,3 @@ msgstr "Promedio hablado"
 #: qpanel/themes/qpanel/templates/stats.html:150
 msgid "Average Wait"
 msgstr "Tiempo de espera"
-
