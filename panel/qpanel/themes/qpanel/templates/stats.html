@@ -35,13 +35,13 @@
           <div class="col-md-2">
             <div class="form-group bmd-form-group">
               <label class="bmd-label-floating">{{ _('From:') }}</label>
-              <input id="from_date" type="text"  class="form-control" value="{{from_date}}">
+              <input id="from_date" type="text" class="form-control" value="{{from_date}}">
             </div>
           </div>
           <div class="col-md-2">
             <div class="form-group bmd-form-group">
               <label class="bmd-label-floating">{{ _('To:') }}</label>
-              <input id="to_date" type="text"  class="form-control" value="{{to_date}}">
+              <input id="to_date" type="text" class="form-control" value="{{to_date}}">
             </div>
           </div>
           <div class="col-md-2">
@@ -49,7 +49,7 @@
               <select id="queue" class="form-control logout">
                 {% for queue in queues %}
                 <option value="{{queue}}">
-                {{ queue }}
+                  {{ queue }}
                 </option>
                 {% endfor %}
               </select>
@@ -62,100 +62,100 @@
           </div>
         </div>
         <div class="row">
-        <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-success card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">phone_in_talk</i>
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-header card-header-success card-header-icon">
+                    <div class="card-icon">
+                      <i class="material-icons">phone_in_talk</i>
+                    </div>
+                    <p class="card-category"></p>
+                    <h3 class="card-title"><span id="n_answered"></span></h3>
+                    <span class="badge badge-info" id="p_answered"></span>
                   </div>
-                  <p class="card-category"></p>
-                  <h3 class="card-title"><span id="n_answered"></span></h3>
-                  <span class="badge badge-info" id="p_answered"></span>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    {{ _('Answered') }}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-danger card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">cancel_presentation</i>
-                  </div>
-                  <p class="card-category"></p>
-                  <h3 class="card-title"><span id="n_abandoned"></span></h3>
-                  <span class="badge badge-info" id="p_abandoned"></span>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    {{ _('Abandoned') }} 
-
+                  <div class="card-footer">
+                    <div class="stats">
+                      {{ _('Answered') }}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-warning card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">phone_callback</i>
+              <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-header card-header-danger card-header-icon">
+                    <div class="card-icon">
+                      <i class="material-icons">cancel_presentation</i>
+                    </div>
+                    <p class="card-category"></p>
+                    <h3 class="card-title"><span id="n_abandoned"></span></h3>
+                    <span class="badge badge-info" id="p_abandoned"></span>
                   </div>
-                  <p class="card-category"></p>
-                  <h3 class="card-title"><span id="inbound"></span></h3>
+                  <div class="card-footer">
+                    <div class="stats">
+                      {{ _('Abandoned') }}
 
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    {{ _('Inbound') }}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-primary card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">timer</i>
+              <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                      <i class="material-icons">phone_callback</i>
+                    </div>
+                    <p class="card-category"></p>
+                    <h3 class="card-title"><span id="inbound"></span></h3>
+
                   </div>
-                  <p class="card-category"></p>
-                  <h3 class="card-title"><span id="av_wait_answered"></span></h3>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    {{ _('Average time') }}
+                  <div class="card-footer">
+                    <div class="stats">
+                      {{ _('Inbound') }}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-info card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">timer_off</i>
+              <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-header card-header-primary card-header-icon">
+                    <div class="card-icon">
+                      <i class="material-icons">timer</i>
+                    </div>
+                    <p class="card-category"></p>
+                    <h3 class="card-title"><span id="av_wait_answered"></span></h3>
                   </div>
-                  <p class="card-category"></p>
-                  <h3 class="card-title"><span id="av_wait_abandoned"></span></h3>
+                  <div class="card-footer">
+                    <div class="stats">
+                      {{ _('Average time') }}
+                    </div>
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    {{ _('Average Wait') }}
+              </div>
+
+              <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-header card-header-info card-header-icon">
+                    <div class="card-icon">
+                      <i class="material-icons">timer_off</i>
+                    </div>
+                    <p class="card-category"></p>
+                    <h3 class="card-title"><span id="av_wait_abandoned"></span></h3>
+                  </div>
+                  <div class="card-footer">
+                    <div class="stats">
+                      {{ _('Average Wait') }}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </div>
+        </div>
       </div>
       {% include theme('footer.html') %}
     </div>
@@ -182,69 +182,80 @@
   <script src="{{url_for('static', filename='js/jquery.datetimepicker.full.min.js')}}" type="text/javascript"></script>
   <script src="{{url_for('static', filename='js/custom-datetimepicker.js')}}" type="text/javascript"></script>
 
-    <script type="application/javascript">
-        $(document).ready(function () {
-            getDataQueue(); //load data on page ready :)
-        });
+  <script type="application/javascript">
+    $(document).ready(function () {
+      getDataQueue(); //load data on page ready :)
+    });
 
-        // parse data and put values on view
-        function parseDataQueue(data){
+    // parse data and put values on view
+    function parseDataQueue(data) {
 
-          $('#inbound').html(data.values.inbound );
-          $('#n_answered').html(data.values.answered);
-          $('#n_abandoned').html(data.values.count_abandon);
+      $('#inbound').html(data.values.inbound);
+      $('#n_answered').html(data.values.answered);
+      $('#n_abandoned').html(data.values.count_abandon);
 
-          var p_answered = Math.round(data.values.answered  * 100  /data.values.inbound);
-          if (isNaN(p_answered))
-              p_answered = 0;
-          $('#p_answered').html(p_answered +'%');
+      var p_answered = Math.round(data.values.answered * 100 / data.values.inbound);
+      if (isNaN(p_answered))
+        p_answered = 0;
+      $('#p_answered').html(p_answered + '%');
 
-          var p_abandoned = Math.round(data.values.count_abandon  * 100  /data.values.inbound) ;
-          if (isNaN(p_abandoned))
-              p_abandoned = 0;
-          $('#p_abandoned').html(p_abandoned + '%');
+      var p_abandoned = Math.round(data.values.count_abandon * 100 / data.values.inbound);
+      if (isNaN(p_abandoned))
+        p_abandoned = 0;
+      $('#p_abandoned').html(p_abandoned + '%');
 
-          var av_wait_answered = parseInt(data.values.seconds_wait / data.values.answered);
-          if (isNaN(av_wait_answered))
-                  av_wait_answered = 0;
-          $('#av_wait_answered').html(av_wait_answered.toString().toMMSS());
+      var av_wait_answered = parseInt(data.values.seconds_wait / data.values.answered);
+      if (isNaN(av_wait_answered))
+        av_wait_answered = 0;
+      $('#av_wait_answered').html(av_wait_answered.toString().toMMSS());
 
-          var av_wait_abandoned = parseInt(data.values.seconds_wait_abandon / data.values.count_abandon);
-          if (isNaN(av_wait_abandoned))
-                av_wait_abandoned = 0;
-          $('#av_wait_abandoned').html(av_wait_abandoned.toString().toMMSS());
+      var av_wait_abandoned = parseInt(data.values.seconds_wait_abandon / data.values.count_abandon);
+      if (isNaN(av_wait_abandoned))
+        av_wait_abandoned = 0;
+      $('#av_wait_abandoned').html(av_wait_abandoned.toString().toMMSS());
+    }
+
+    function getDataQueue() {
+      var result;
+      var r = $.ajax({
+        type: 'GET',
+        url: '{{url_for('.stats_json', name=name, from_date=from_date, to_date=to_date)}}'
+            });
+      r.done(function (response) {
+        if (response) {
+          result = response;
+          parseDataQueue(result);
         }
+      });
+      r.fail(function (response) {
+      });
 
-        function getDataQueue() {
-            var result;
-            var r = $.ajax({
-                type: 'GET',
-                url: '{{url_for('.stats_json', name=name, from_date=from_date, to_date=to_date)}}'
-            });
-            r.done(function (response) {
-                if (response) {
-                    result = response;
-                    parseDataQueue(result);
-                }
-            });
-            r.fail(function (response) {
-            });
+      r.always(function () {
+      });
+    }
 
-            r.always(function () {
-            });
-        }
+    $('#queue').val('{{name}}')
 
-        $('#queue').val('{{name}}')
+    $('#get_atentions').on('click', function (e) {
+      var queue = $('#queue').val();
+      var from_date = $('#from_date').val();
+      var to_date = $('#to_date').val();
+      url_history = '{{url_for('.stats')}}' + '/' + queue + '/' + from_date + '/' + to_date;
+      window.location.href = url_history;
+    });
 
-        $('#get_atentions').on('click', function (e) {
-            var queue = $('#queue').val();
-            var from_date= $('#from_date').val();
-            var to_date = $('#to_date').val();
-            url_history = '{{url_for('.stats')}}' + '/'+ queue + '/' + from_date + '/' + to_date;
-            window.location.href = url_history;
-        });
+  </script>
 
-    </script>
+  <!-- -------------------------------------- custom script -------------------------------- -->
+  <script>
+    setTimeout(() => {
+      // $("#language").val(res.lang)
+      if (localStorage.getItem('lang') == 'fa') {
+        $('body').addClass('custom-rtl');
+        return
+      }
+    }, 500);
+  </script>
 </body>
 
 </html>
