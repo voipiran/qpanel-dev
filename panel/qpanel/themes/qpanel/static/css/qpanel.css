@@ -118,6 +118,13 @@
   line-height: 0;
 }
 
-.navbar{
-  display: none;
+.custom-rtl b,.custom-rtl span{
+	font-size: 13px !important;
+    padding: 0 3px !important;
+}
+.custom-rtl .fa{
+    padding: 0 10px !important;
+}
+#navItem_language{
+	display: none;
 }
