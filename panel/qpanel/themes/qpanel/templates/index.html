@@ -146,12 +146,13 @@
       else {
         $('body').removeClass('custom-rtl');
       }
+      console.log("sessionStorage.getItem('lang')", sessionStorage.getItem('lang'));
+      console.log("res.lang", res.lang);
+
+      if (sessionStorage.getItem('lang') == res.lang) return
       
-      if (localStorage.getItem('lang') == res.lang || localStorage.getItem('lang') == null)
-      return
-      
-      localStorage.setItem('lang', res.lang)
-      window.location = '{{ url_for('.language') }}' + '/' + res.lang;
+      sessionStorage.setItem('lang', res.lang)
+      location.href = '{{ url_for('.language') }}' + '/' + res.lang;
     }
   </script>
 

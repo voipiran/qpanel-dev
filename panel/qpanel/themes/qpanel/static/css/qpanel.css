@@ -125,6 +125,10 @@
 .custom-rtl .fa{
     padding: 0 10px !important;
 }
-#navItem_language,#mainFooter{
-	display: none;
+#navItem_language{
+	visibility: hidden;
+}
+
+#mainFooter{
+	visibility: hidden;
 }

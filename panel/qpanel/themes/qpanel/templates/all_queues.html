@@ -355,7 +355,7 @@
   <script>
     setTimeout(() => {
       // $("#language").val(res.lang)
-      if (localStorage.getItem('lang') == 'fa') {
+      if (sessionStorage.getItem('lang') == 'fa') {
         $('body').addClass('custom-rtl');
         return
       }

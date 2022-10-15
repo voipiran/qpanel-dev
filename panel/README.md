@@ -1,3 +1,15 @@
+## Custome Language
+> for custome and change language first install app poEdit in your pc
+* go to directory qpanel/translations/fa/LC_MESSAGES
+* open file messages.po with poEdit
+* custome file and save on server
+> after change run below command on server
+ ```
+  pybabel compile -d qpanel/translations
+ ```
+
+
+
 &nbsp;
 <p align="center">
   <a href="https://ghost.org">
