@@ -23,7 +23,7 @@ echo "------------Create DB-----------------"
 yum install -y python-virtualenv swig mod_wsgi python3 python-pip npm
 rm -rf /var/www/html/panel
 rm -rf panel
-git clone https://github.com/voipiran/panel.git
+git clone https://github.com/voipiran/qpanel.git
 cd panel/
 yes | cp -avr panel /var/www/html/ > /dev/null
 
